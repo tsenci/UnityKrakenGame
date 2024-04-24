@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 302389420}
   - component: {fileID: 302389419}
   m_Layer: 5
-  m_Name: GameStart_pnl
+  m_Name: QuizGame_pnl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
