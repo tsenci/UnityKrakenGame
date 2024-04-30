@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 302389418}
     m_Modifications:
+    - target: {fileID: 4398935965228140573, guid: 7a6e5e3c70acacf4cb5873a7f569d61d, type: 3}
+      propertyPath: _questionSetup
+      value: 
+      objectReference: {fileID: 833931798}
     - target: {fileID: 9122607194132183966, guid: 7a6e5e3c70acacf4cb5873a7f569d61d, type: 3}
       propertyPath: m_Name
       value: AnswerC_btn
@@ -323,6 +327,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 302389418}
     m_Modifications:
+    - target: {fileID: 4398935965228140573, guid: 7a6e5e3c70acacf4cb5873a7f569d61d, type: 3}
+      propertyPath: _questionSetup
+      value: 
+      objectReference: {fileID: 833931798}
     - target: {fileID: 9122607194132183966, guid: 7a6e5e3c70acacf4cb5873a7f569d61d, type: 3}
       propertyPath: m_Name
       value: AnswerB_btn
@@ -707,7 +715,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Results:\t"
+  m_text: 'Results: _/_ Correct'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1785,6 +1793,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 302389418}
     m_Modifications:
+    - target: {fileID: 4398935965228140573, guid: 7a6e5e3c70acacf4cb5873a7f569d61d, type: 3}
+      propertyPath: _questionSetup
+      value: 
+      objectReference: {fileID: 833931798}
     - target: {fileID: 9122607194132183966, guid: 7a6e5e3c70acacf4cb5873a7f569d61d, type: 3}
       propertyPath: m_Name
       value: AnswerD_btn
@@ -2496,7 +2508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1754323919
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3073,6 +3085,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 302389418}
     m_Modifications:
+    - target: {fileID: 4398935965228140573, guid: 7a6e5e3c70acacf4cb5873a7f569d61d, type: 3}
+      propertyPath: _questionSetup
+      value: 
+      objectReference: {fileID: 833931798}
     - target: {fileID: 9122607194132183966, guid: 7a6e5e3c70acacf4cb5873a7f569d61d, type: 3}
       propertyPath: m_Name
       value: AnswerA_btn

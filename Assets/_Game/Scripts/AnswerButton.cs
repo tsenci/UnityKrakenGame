@@ -5,6 +5,7 @@ using TMPro;
 
 public class AnswerButton : MonoBehaviour
 {
+    [SerializeField] public QuestionSetup _questionSetup;
     private bool isCorrect;
     [SerializeField]
     private TextMeshProUGUI answerText;
@@ -23,6 +24,9 @@ public class AnswerButton : MonoBehaviour
 
     public void OnClick()
     {
+        //next question
+        _questionSetup.GoToNextQuestion();
+
         if (isCorrect)
         {
             Debug.Log("Correct Answer");

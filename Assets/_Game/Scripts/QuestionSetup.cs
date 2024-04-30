@@ -17,6 +17,11 @@ public class QuestionSetup : MonoBehaviour
     [SerializeField]
     private int correctAnswerChoice;
 
+    [SerializeField]
+    private GameObject _endScreen;
+    [SerializeField]
+    private GameObject _quizGame;
+
     private void Awake()
     {
         GetQuestionAssets();
@@ -34,6 +39,12 @@ public class QuestionSetup : MonoBehaviour
         SelectNewQuestion();
         SetQuestionValue();
         SetAnswerValues();
+        if (questions.Count <= 0)
+        {
+            _quizGame.SetActive(false);
+            _endScreen.SetActive(true);
+
+        }
     }
 
     private void GetQuestionAssets()
