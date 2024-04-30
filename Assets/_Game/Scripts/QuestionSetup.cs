@@ -29,12 +29,7 @@ public class QuestionSetup : MonoBehaviour
         SetAnswerValues();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     private void GetQuestionAssets()
     {
         //Get all the questions from the folder
@@ -84,5 +79,25 @@ public class QuestionSetup : MonoBehaviour
         bool correctAnswerChosen = false;
 
         List<string> newList = new List<string>();
+
+        for (int i = 0; i < answerButtons.Length; i++)
+        {
+            //get random number of remaining choices
+            int random = Random.Range(0, originalList.Count);
+
+            //if random number is 0, is correct choice, only used ONCE
+            if (random == 0 && !correctAnswerChosen)
+            {
+                correctAnswerChoice = i;
+                correctAnswerChosen = true;
+            }
+
+            //add this to the new list
+            newList.Add(originalList[random]);
+            //remove choice from original list
+            originalList.RemoveAt(random);
+        }
+
+        return newList;
     }
 }
