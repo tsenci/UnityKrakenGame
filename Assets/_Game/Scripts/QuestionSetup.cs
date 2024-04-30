@@ -29,7 +29,13 @@ public class QuestionSetup : MonoBehaviour
         SetAnswerValues();
     }
 
-    
+    public void GoToNextQuestion()
+    {
+        SelectNewQuestion();
+        SetQuestionValue();
+        SetAnswerValues();
+    }
+
     private void GetQuestionAssets()
     {
         //Get all the questions from the folder
