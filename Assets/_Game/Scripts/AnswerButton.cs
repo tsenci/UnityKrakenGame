@@ -6,36 +6,37 @@ using TMPro;
 public class AnswerButton : MonoBehaviour
 {
     [SerializeField] public QuestionSetup _questionSetup;
-    private bool isCorrect;
+    private bool _isCorrect;
     [SerializeField]
-    private TextMeshProUGUI answerText;
-
-    public int pointsGained = 0;
+    private TextMeshProUGUI _answerText;
+    [SerializeField] 
+    private QuestionSetup _scoreUpdater;
 
     public void SetAnswerText(string newText)
     {
-        answerText.text = newText;
+        _answerText.text = newText;
     }
 
     public void SetIsCorrect(bool newBool)
     {
-        isCorrect = newBool;
+        _isCorrect = newBool;
     }
 
     public void OnClick()
     {
-        //next question
-        _questionSetup.GoToNextQuestion();
-
-        if (isCorrect)
+        if (_isCorrect)
         {
             Debug.Log("Correct Answer");
-            pointsGained += 1;
-            Debug.Log("Points = " + pointsGained);
+            _scoreUpdater.IncreaseScore(1);
+            //_pointsGained++;
+            //Debug.Log(_pointsGained);
         }
         else
         {
             Debug.Log("Wrong Answer");
         }
+
+        //next question
+        _questionSetup.GoToNextQuestion();
     }
 }

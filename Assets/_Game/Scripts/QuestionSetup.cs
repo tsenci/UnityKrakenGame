@@ -22,9 +22,16 @@ public class QuestionSetup : MonoBehaviour
     [SerializeField]
     private GameObject _quizGame;
 
+    [SerializeField]
+    private TextMeshProUGUI _resultsText;
+
+    private int _currentScore;
+    private int _totalQuestions;
+
     private void Awake()
     {
         GetQuestionAssets();
+        _totalQuestions = questions.Count;
     }
     // Start is called before the first frame update
     void Start()
@@ -36,14 +43,19 @@ public class QuestionSetup : MonoBehaviour
 
     public void GoToNextQuestion()
     {
-        SelectNewQuestion();
-        SetQuestionValue();
-        SetAnswerValues();
         if (questions.Count <= 0)
         {
             _quizGame.SetActive(false);
             _endScreen.SetActive(true);
+            GetQuestionAssets();
+            _currentScore = 0;
 
+        }
+        else
+        {
+            SelectNewQuestion();
+            SetQuestionValue();
+            SetAnswerValues();
         }
     }
 
@@ -67,6 +79,15 @@ public class QuestionSetup : MonoBehaviour
     {
         //set question text
         questionText.text = currentQuestion.question;
+    }
+
+    public void IncreaseScore(int scoreIncrease)
+    {
+        //increase score
+        _currentScore += scoreIncrease;
+        //update score display so that we can see new score
+        _resultsText.text =
+            "Results: " + _currentScore.ToString() + "/" + _totalQuestions;
     }
 
     private void SetAnswerValues()
