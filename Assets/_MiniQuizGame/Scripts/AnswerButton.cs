@@ -9,8 +9,6 @@ public class AnswerButton : MonoBehaviour
     private bool _isCorrect;
     [SerializeField]
     private TextMeshProUGUI _answerText;
-    [SerializeField] 
-    private QuestionSetup _scoreUpdater;
 
     public void SetAnswerText(string newText)
     {
@@ -27,9 +25,7 @@ public class AnswerButton : MonoBehaviour
         if (_isCorrect)
         {
             Debug.Log("Correct Answer");
-            _scoreUpdater.IncreaseScore(1);
-            //_pointsGained++;
-            //Debug.Log(_pointsGained);
+            _questionSetup.IncreaseScore(1);
         }
         else
         {

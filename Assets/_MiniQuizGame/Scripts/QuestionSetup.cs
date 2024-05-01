@@ -30,10 +30,12 @@ public class QuestionSetup : MonoBehaviour
 
     private void Awake()
     {
+        //pull questions for quiz start
         GetQuestionAssets();
+        //set end result total question to amt of questions started with
         _totalQuestions = questions.Count;
     }
-    // Start is called before the first frame update
+    
     void Start()
     {
         SelectNewQuestion();
@@ -43,6 +45,7 @@ public class QuestionSetup : MonoBehaviour
 
     public void GoToNextQuestion()
     {
+        //if no more questions, pull up end screen and reset game for if player continues
         if (questions.Count <= 0)
         {
             _quizGame.SetActive(false);
@@ -51,6 +54,7 @@ public class QuestionSetup : MonoBehaviour
             _currentScore = 0;
 
         }
+        //otherwise go to the next question
         else
         {
             SelectNewQuestion();
